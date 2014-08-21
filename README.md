@@ -5,7 +5,7 @@ Angular Module to manage your failed requests
 
 Requirements
 ------------
-This module requires my [local-storage module](https://github.com/alejandrocarrasco/angular-local-storage) in order to work.
+This module requires my [key-value-storage module](https://github.com/alejandrocarrasco/angular-key-value-storage) in order to work.
 
 Installation
 ------------
