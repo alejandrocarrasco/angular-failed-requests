@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Angular-failed-requests-handler by alejandrocarrasco</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/alejandrocarrasco/angular-failed-requests-handler">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/alejandrocarrasco/angular-failed-requests-handler/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/alejandrocarrasco/angular-failed-requests-handler/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Angular-failed-requests-handler</h1>
+          <p>Angular Module to manage your failed requests</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/alejandrocarrasco">alejandrocarrasco</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1>
+<a name="angular-failed-requests-handler" class="anchor" href="#angular-failed-requests-handler"><span class="octicon octicon-link"></span></a>Angular Failed Requests Handler</h1>
+
+<p>Angular Module to manage your failed requests.</p>
+
+<p>This module is focused on <strong>mobile development</strong>, specially for phonegap apps (or any <strong>HTML5 / Javascript</strong> framework)  that you build using angular.</p>
+
+<p>Although you can use it for any web app in which you get missing server errors, or any case that suits you.</p>
+
+<p>This module will help you to:</p>
+
+<ul>
+<li>Store failed requests when mobile devices lose connection</li>
+<li>Keep your app running as if nothing has happened and retry all your failed HTTP Requests later (when your app is loaded again)</li>
+</ul><p>In order to keep your app running correctly, <strong>you should manage error cases</strong> as them will be passed to your http requests, that is, you have to <strong>control http error responses and keep them <em>hidden</em></strong> to make believe the user everything went right and <strong>improve the user experience</strong> of your app. This means user won't have unwanted stops or halts using your app.</p>
+
+<h2>
+<a name="upcomming-features" class="anchor" href="#upcomming-features"><span class="octicon octicon-link"></span></a>Upcomming Features</h2>
+
+<p>As this repository is focused to help manage failed requets these features are planned to be added soon:</p>
+
+<ol>
+<li>Management of resolving failed requests
+
+<ul>
+<li>Resolving time (currently failed requests are retried when the app reloads).</li>
+</ul>
+</li>
+<li>Filters to catch desired requests by path.</li>
+<li>Some other ideas that come as this project goes on...</li>
+</ol><p>Suggestions are welcome.</p>
+
+<h2>
+<a name="requirements" class="anchor" href="#requirements"><span class="octicon octicon-link"></span></a>Requirements</h2>
+
+<p>This module requires my <a href="https://github.com/alejandrocarrasco/angular-key-value-storage">key-value-storage module</a> in order to work. You'll need ngCookies for this module to work.</p>
+
+<h2>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Add "ngCookies" and "failedRequestsManager" to your app modules list, and corresponding scripts to your HTML:</p>
+
+<pre><code>angular.module('MyApp', [ ... , 'FailedRequestsHandler', 'ngCookies' ])
+
+&lt;script type="application/javascript" src="lib/angular/angular-cookies.min.js"&gt;&lt;/script&gt;
+
+&lt;script type="application/javascript" src="lib/key-value-storage/key-value-storage.js"&gt;&lt;/script&gt;
+&lt;script type="application/javascript" src="lib/failed-requests/failed-requests-handler.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<p>KeyValueStorage module is added by FailedRequestsHandler module in your app definition, although, you have to add the script in your html.</p>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>Currently, by adding the 'failedRequestsHandler' module, all your non-read HTTP Requests which have failed will be stored. Automatically, when your app loads again, this module will retry the stored requests.</p>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
