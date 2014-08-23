@@ -3,24 +3,48 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Key Value Storage Sample</title>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body ng-app="KeyValueApp">
+<body ng-app="FailedReqApp" class="container">
 <header>
     <h1>Key Value Storage Sample</h1>
 </header>
-<article ng-controller="KeyValueCtrl">
-    <section>
-        <h2>Requests</h2>
-        <input ng-model="reqData" type="text">
-        <button ng-click="sendFailingRequest()">Send Failing Request</button>
-    </section>
-    <section ng-if="valuesStorage">
-        <h2>LocalStorage Values</h2>
-        <div ng-repeat="v in valuesStorage">
-            <span>Key: {{v.key}}, </span>
-            <span>Value: {{v.value}}</span>
+<article ng-controller="FailedReqCtrl">
+    <section class="panel panel-primary">
+        <div class="panel-heading"><h3>Sample Requests</h3></div>
+        <div class="panel-body">
+            <p>
+                <select ng-model="req.method" ng-init="req.method='POST'">
+                    <option value="POST">POST</option>
+                    <option value="PUT">PUT</option>
+                    <option value="DELETE">DELETE</option>
+                </select>
+                Data: <input ng-model="req.data" type="text" placeholder="Some sample data">
+                URL: <input ng-model="req.path" type="text" placeholder="path/to/something">
+                <button ng-click="sendFailingRequest(req)">Send Failing Request</button>
+            </p>
+            <p><b>Press F5 and check the console.</b></p>
+            <p>Observe failing requests being called at page load.</p>
         </div>
     </section>
+    <!--<section class="panel panel-primary" ng-if="valuesStorage">-->
+        <!--<div class="panel-heading"><h3>LocalStorage Values</h3></div>-->
+        <!--<div class="panel-body">-->
+            <section ng-if="valuesStorage" class="panel panel-info" ng-repeat="v in valuesStorage">
+                <div class="panel-heading"><h4>{{v.key}}</h4></div>
+                <div class="panel-body">
+                    <ul class="list-group">
+                        <li class="list-group-item" ng-repeat="req in v.value">
+                            <span class="label label-default">{{req.method}}</span>
+                            <b>{{req.url}}</b>
+                            <span>"{{req.data}}"</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </section>
+        <!--</div>-->
+    <!--</section>-->
     <section ng-if="cookies[0] != '' ">
         <h2>Cookies</h2>
         <div ng-repeat="c in cookies">

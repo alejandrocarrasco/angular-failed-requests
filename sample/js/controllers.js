@@ -4,10 +4,19 @@ angular.module('FailedReqApp.controllers', []);
 
 var kvCtrl = angular.module('FailedReqApp.controllers');
 
-kvCtrl.controller("FailedReqCtrl", function($scope, $http){
+kvCtrl.controller("FailedReqCtrl", function($scope, $http, $timeout, KeyValueStorage){
 
+    $scope.sendFailingRequest = function (req) {
+        $http({
+                method: req.method,
+                url: '/non-existant/' + req.path,
+                data: req.data
+        });
+        $timeout(getValues, 500);
+        getCookies();
+    };
 
-    getValues();
+    $timeout(getValues, 500);
     getCookies();
 
     $scope.setValue = function(k,v){
@@ -32,7 +41,7 @@ kvCtrl.controller("FailedReqCtrl", function($scope, $http){
 
         angular.forEach(keys,function(key){
             values.push( { key: key, value: KeyValueStorage.get(key) } )
-        })
+        });
 
         $scope.valuesStorage = values;
     }

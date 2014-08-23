@@ -17,7 +17,7 @@ failedReqHandler.run(function(FailedRequestsSolver){
     FailedRequestsSolver.resolveFailedRequests();
 });
 
-failedReqHandler.service('FailedRequestsHandler', function(LocalStorage){
+failedReqHandler.service('FailedRequestsHandler', function(KeyValueStorage){
     // Recover the last requests queue if they exist
     var requests = getFailedRequestsQueue();
 
@@ -48,11 +48,11 @@ failedReqHandler.service('FailedRequestsHandler', function(LocalStorage){
     }
 
     function storeRequests() {
-        LocalStorage.put("FailedRequestQueue", requests);
+        KeyValueStorage.put("FailedRequestQueue", requests);
     }
 
     function getFailedRequestsQueue() {
-        return LocalStorage.get("FailedRequestQueue") || [];
+        return KeyValueStorage.get("FailedRequestQueue") || [];
     }
 });
 
