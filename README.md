@@ -4,6 +4,9 @@ Angular Failed Requests
 Angular Module to manage your failed requests.
 
 This module is focused on **mobile development**, specially for phonegap apps (or any **HTML5 / Javascript** framework)  that you build using angular.
+
+Although you can use it for any web app in which you get missing server errors, or any case that suits you.
+
 This module will help you to:
 * Store failed requests when mobile devices lose connection
 * Keep your app running as if nothing has happened and retry all your failed HTTP Requests later (when your app is loaded again)
