@@ -1,5 +1,5 @@
-Angular Failed Requests
-=======================
+Angular Failed Requests Handler
+===============================
 
 Angular Module to manage your failed requests.
 
