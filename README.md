@@ -31,13 +31,14 @@ This module requires my [key-value-storage module](https://github.com/alejandroc
 
 Installation
 ------------
-Add "ngCookies", "localStorage" and "failedRequestsManager" to your app modules list:
+Add "ngCookies" and "failedRequestsManager" to your app modules list:
 ```
-angular.module('MyApp', [ ... , 'localStorage', 'failedRequestsHandler', 'ngCookies' ])
+angular.module('MyApp', [ ... , 'FailedRequestsHandler', 'ngCookies' ])
 
 <script type="application/javascript" src="lib/key-value-storage/key-value-storage.js"></script>
 <script type="application/javascript" src="lib/failed-requests/failed-requests-handler.js"></script>
 ```
+KeyValueStorage module is added by FailedRequestsHandler module in your app definition, although, you have to add the script in your html.
 
 Usage
 -----
