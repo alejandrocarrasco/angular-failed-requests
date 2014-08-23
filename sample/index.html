@@ -27,28 +27,16 @@
             <p>Observe failing requests being called at page load.</p>
         </div>
     </section>
-    <!--<section class="panel panel-primary" ng-if="valuesStorage">-->
-        <!--<div class="panel-heading"><h3>LocalStorage Values</h3></div>-->
-        <!--<div class="panel-body">-->
-            <section ng-if="valuesStorage" class="panel panel-info" ng-repeat="v in valuesStorage">
-                <div class="panel-heading"><h4>{{v.key}}</h4></div>
-                <div class="panel-body">
-                    <ul class="list-group">
-                        <li class="list-group-item" ng-repeat="req in v.value">
-                            <span class="label label-default">{{req.method}}</span>
-                            <b>{{req.url}}</b>
-                            <span>"{{req.data}}"</span>
-                        </li>
-                    </ul>
-                </div>
-
-            </section>
-        <!--</div>-->
-    <!--</section>-->
-    <section ng-if="cookies[0] != '' ">
-        <h2>Cookies</h2>
-        <div ng-repeat="c in cookies">
-            {{c}}
+    <section ng-if="reqsQueue" class="panel panel-info">
+        <div class="panel-heading"><h4>Failed Requests Queue</h4></div>
+        <div class="panel-body">
+            <ul class="list-group">
+                <li class="list-group-item" ng-repeat="req in reqsQueue">
+                    <span class="label label-default">{{req.method}}</span>
+                    <b>{{req.url}}</b>
+                    <span>"{{req.data}}"</span>
+                </li>
+            </ul>
         </div>
     </section>
 </article>
