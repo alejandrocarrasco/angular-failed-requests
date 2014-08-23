@@ -35,6 +35,8 @@ Add "ngCookies" and "failedRequestsManager" to your app modules list:
 ```
 angular.module('MyApp', [ ... , 'FailedRequestsHandler', 'ngCookies' ])
 
+<script type="application/javascript" src="lib/angular/angular-cookies.min.js"></script>
+
 <script type="application/javascript" src="lib/key-value-storage/key-value-storage.js"></script>
 <script type="application/javascript" src="lib/failed-requests/failed-requests-handler.js"></script>
 ```
