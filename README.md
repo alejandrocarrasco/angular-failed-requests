@@ -31,7 +31,7 @@ This module requires my [key-value-storage module](https://github.com/alejandroc
 
 Installation
 ------------
-Add "ngCookies" and "failedRequestsManager" to your app modules list:
+Add "ngCookies" and "failedRequestsManager" to your app modules list, and corresponding scripts to your HTML:
 ```
 angular.module('MyApp', [ ... , 'FailedRequestsHandler', 'ngCookies' ])
 
