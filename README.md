@@ -17,8 +17,9 @@ In order to keep your app running correctly, **you should manage error cases** a
 Upcomming Features
 ------------------
 As this repository is focused to help manage failed requets these features are planned to be added soon:
+
 1. Management of resolving failed requests
-  * Resolving time (currently failed requests are retried when the app reloads)
+  * Resolving time (currently failed requests are retried when the app reloads).
 2. Filters to catch desired requests by path.
 3. Some other ideas that come as this project goes on...
 
