@@ -1,10 +1,12 @@
 'use strict';
 
-angular.module('KeyValueApp.controllers', []);
+angular.module('FailedReqApp.controllers', []);
 
-var kvCtrl = angular.module('KeyValueApp.controllers');
+var kvCtrl = angular.module('FailedReqApp.controllers');
 
-kvCtrl.controller("KeyValueCtrl", function($scope, KeyValueStorage){
+kvCtrl.controller("FailedReqCtrl", function($scope, $http){
+
+
     getValues();
     getCookies();
 

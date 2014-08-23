@@ -5,9 +5,9 @@
  * @requires: localStorage module for localStorage or cookies management
  * @author: Alejandro Carrasco
  */
-angular.module('failedRequestsHandler', ['localStorage']);
+angular.module('FailedRequestsHandler', ['KeyValueStorage']);
 
-var failedReqHandler = angular.module('failedRequestsHandler');
+var failedReqHandler = angular.module('FailedRequestsHandler');
 
 failedReqHandler.config(function($httpProvider){
     $httpProvider.interceptors.push('FailedRequestsInterceptor');

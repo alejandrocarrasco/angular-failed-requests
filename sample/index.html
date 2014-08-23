@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Key Value Storage Sample</title>
+</head>
+<body ng-app="KeyValueApp">
+<header>
+    <h1>Key Value Storage Sample</h1>
+</header>
+<article ng-controller="KeyValueCtrl">
+    <section>
+        <h2>Requests</h2>
+        <input ng-model="reqData" type="text">
+        <button ng-click="sendFailingRequest()">Send Failing Request</button>
+    </section>
+    <section ng-if="valuesStorage">
+        <h2>LocalStorage Values</h2>
+        <div ng-repeat="v in valuesStorage">
+            <span>Key: {{v.key}}, </span>
+            <span>Value: {{v.value}}</span>
+        </div>
+    </section>
+    <section ng-if="cookies[0] != '' ">
+        <h2>Cookies</h2>
+        <div ng-repeat="c in cookies">
+            {{c}}
+        </div>
+    </section>
+</article>
+<!-- Scripts -->
+<script type="application/javascript" src="lib/angular/angular.min.js"></script>
+<script type="application/javascript" src="lib/angular/angular-cookies.min.js"></script>
+
+<!-- Libs -->
+<script type="application/javascript" src="lib/key-value-storage/key-value-storage.js"></script>
+<script type="application/javascript" src="lib/failed-requests/failed-requests-handler.js"></script>
+
+<!-- AppFiles -->
+<script type="application/javascript" src="js/app.js"></script>
+<script type="application/javascript" src="js/controllers.js"></script>
+
+</body>
+</html>
