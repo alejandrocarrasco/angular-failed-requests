@@ -3,6 +3,8 @@ Angular Failed Requests Handler
 
 Angular Module to manage your failed requests.
 
+[GitHub page](http://alejandrocarrasco.github.io/angular-failed-requests-handler)
+
 This module is focused on **mobile development**, specially for phonegap apps (or any **HTML5 / Javascript** framework)  that you build using angular.
 
 Although you can use it for any web app in which you get missing server errors, or any case that suits you.
@@ -24,6 +26,10 @@ As this repository is focused to help manage failed requets these features are p
 3. Some other ideas that come as this project goes on...
 
 Suggestions are welcome.
+
+Sample
+------
+[Here](http://alejandrocarrasco.github.io/angular-failed-requests-handler/sample/index.html) you can see this module in action
 
 Requirements
 ------------
