@@ -5,23 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
 
-    <title>Angular-failed-requests-handler by alejandrocarrasco</title>
+    <title>Angular Failed Requests Handler by cyberdelphos</title>
   </head>
 
   <body>
 
     <header>
       <div class="container">
-        <h1>Angular-failed-requests-handler</h1>
+        <h1>Angular Failed Requests Handler</h1>
         <h2>Angular Module to manage your failed requests</h2>
 
         <section id="downloads">
-          <a href="https://github.com/alejandrocarrasco/angular-failed-requests-handler/zipball/master" class="btn">Download as .zip</a>
-          <a href="https://github.com/alejandrocarrasco/angular-failed-requests-handler/tarball/master" class="btn">Download as .tar.gz</a>
-          <a href="https://github.com/alejandrocarrasco/angular-failed-requests-handler" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+          <a href="https://github.com/cyberdelphos/angular-failed-requests-handler/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/cyberdelphos/angular-failed-requests-handler/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/cyberdelphos/angular-failed-requests-handler" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
         </section>
       </div>
     </header>
@@ -29,7 +29,7 @@
     <div class="container">
       <section id="main_content">
         <h1>
-<a name="angular-failed-requests-handler" class="anchor" href="#angular-failed-requests-handler"><span class="octicon octicon-link"></span></a>Angular Failed Requests Handler</h1>
+<a id="angular-failed-requests-handler" class="anchor" href="#angular-failed-requests-handler" aria-hidden="true"><span class="octicon octicon-link"></span></a>Angular Failed Requests Handler</h1>
 
 <p>Angular Module to manage your failed requests.</p>
 
@@ -42,10 +42,12 @@
 <ul>
 <li>Store failed requests when mobile devices lose connection</li>
 <li>Keep your app running as if nothing has happened and retry all your failed HTTP Requests later (when your app is loaded again)</li>
-</ul><p>In order to keep your app running correctly, <strong>you should manage error cases</strong> as them will be passed to your http requests, that is, you have to <strong>control http error responses and keep them <em>hidden</em></strong> to make believe the user everything went right and <strong>improve the user experience</strong> of your app. This means user won't have unwanted stops or halts using your app.</p>
+</ul>
+
+<p>In order to keep your app running correctly, <strong>you should manage error cases</strong> as them will be passed to your http requests, that is, you have to <strong>control http error responses and keep them <em>hidden</em></strong> to make believe the user everything went right and <strong>improve the user experience</strong> of your app. This means user won't have unwanted stops or halts using your app.</p>
 
 <h2>
-<a name="upcomming-features" class="anchor" href="#upcomming-features"><span class="octicon octicon-link"></span></a>Upcomming Features</h2>
+<a id="upcomming-features" class="anchor" href="#upcomming-features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Upcomming Features</h2>
 
 <p>As this repository is focused to help manage failed requets these features are planned to be added soon:</p>
 
@@ -58,20 +60,22 @@
 </li>
 <li>Filters to catch desired requests by path.</li>
 <li>Some other ideas that come as this project goes on...</li>
-</ol><p>Suggestions are welcome.</p>
+</ol>
+
+<p>Suggestions are welcome.</p>
 
 <h2>
-<a name="sample" class="anchor" href="#sample"><span class="octicon octicon-link"></span></a>Sample</h2>
+<a id="sample" class="anchor" href="#sample" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample</h2>
 
-<p><a href="http://alejandrocarrasco.github.io/angular-failed-requests-handler/sample/index.html">Here</a> you can see this module in action</p>
-
-<h2>
-<a name="requirements" class="anchor" href="#requirements"><span class="octicon octicon-link"></span></a>Requirements</h2>
-
-<p>This module requires my <a href="https://github.com/alejandrocarrasco/angular-key-value-storage">key-value-storage module</a> in order to work. You'll need ngCookies for this module to work.</p>
+<p><a href="http://cyberdelphos.github.io/angular-failed-requests-handler/sample/index.html">Here</a> you can see this module in action</p>
 
 <h2>
-<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Requirements</h2>
+
+<p>This module requires my <a href="https://github.com/cyberdelphos/angular-key-value-storage">key-value-storage module</a> in order to work. You'll need ngCookies for this module to work.</p>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
 
 <p>Add "ngCookies" and "failedRequestsManager" to your app modules list, and corresponding scripts to your HTML:</p>
 
@@ -86,7 +90,7 @@
 <p>KeyValueStorage module is added by FailedRequestsHandler module in your app definition, although, you have to add the script in your html.</p>
 
 <h2>
-<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
 
 <p>Currently, by adding the 'failedRequestsHandler' module, all your non-read HTTP Requests which have failed will be stored. Automatically, when your app loads again, this module will retry the stored requests.</p>
       </section>
