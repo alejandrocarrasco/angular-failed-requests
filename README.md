@@ -3,7 +3,7 @@ Angular Failed Requests Handler
 
 Angular Module to manage your failed requests.
 
-[GitHub page](http://alejandrocarrasco.github.io/angular-failed-requests-handler)
+[GitHub page](http://cyberdelphos.github.io/angular-failed-requests-handler)
 
 This module is focused on **mobile development**, specially for phonegap apps (or any **HTML5 / Javascript** framework)  that you build using angular.
 
@@ -29,11 +29,11 @@ Suggestions are welcome.
 
 Sample
 ------
-[Here](http://alejandrocarrasco.github.io/angular-failed-requests-handler/sample/index.html) you can see this module in action
+[Here](http://cyberdelphos.github.io/angular-failed-requests-handler/sample/index.html) you can see this module in action
 
 Requirements
 ------------
-This module requires my [key-value-storage module](https://github.com/alejandrocarrasco/angular-key-value-storage) in order to work. You'll need ngCookies for this module to work.
+This module requires my [key-value-storage module](https://github.com/cyberdelphos/angular-key-value-storage) in order to work. You'll need ngCookies for this module to work.
 
 Installation
 ------------
